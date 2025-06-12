@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            var lamp = new Lamp(State.Off);
+            lamp.Operate(); 
         }
     }
 }
