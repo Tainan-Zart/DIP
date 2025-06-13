@@ -1,17 +1,17 @@
 ﻿namespace AtividadeDIP
 {
-    public class Switch
+    public class Switch : ISwitch
     {
-        private Lamp lamp;
+        private readonly IOperate _operate;
 
-        public Switch(Lamp lamp)
+        public Switch(IOperate operate)
         {
-            this.lamp = lamp;
+            _operate = operate;
         }
 
-        public void Press ()
+        public void Press()
         {
-            lamp.Operate();
+            _operate.Operate();
         }
     }
 }

@@ -4,8 +4,11 @@
     {
         static void Main(string[] args)
         {
-            var lamp = new Lamp(State.Off);
-            lamp.Operate(); 
+            IOperate lamp = new Lamp();
+            ISwitch sw = new Switch(lamp);
+
+            sw.Press();
+            sw.Press(); 
         }
     }
 }
